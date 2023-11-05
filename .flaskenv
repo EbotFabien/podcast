@@ -1,0 +1,2 @@
+FLASK_APP=podcast.py
+FLASK_DEBUG=TRUE
