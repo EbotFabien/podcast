@@ -42,7 +42,7 @@ def token_required(f):
         return f(*args, **kwargs)
     return decorated
 
-class MyApi(Api):
+'''class MyApi(Api):
     @property
     def specs_url(self):
         """Monkey patch for HTTPS"""
@@ -51,13 +51,13 @@ class MyApi(Api):
         prefix=url.split('/swagger.json')[0]
         prefix=prefix.split('/api')[0]
         url=prefix +'/edlgateway'+'/swagger.json'
-        return  url
+        return  url'''
 
     
 api = Blueprint('api', __name__, template_folder = '../templates')
 apisec = Api( app=api, doc='/docs', version='1.9.0', title='MikroticA.', \
     description='This documentation contains all routes to access the Mikrotic. \npip install googletransSome routes require authorization and can only be gotten \
-    from the Microtik company', license='../LICENSE', license_url='www.sweep.com', contact='touchone0001@gmail.com', authorizations=authorizations)
+    from the Podcast company', license='../LICENSE', license_url='www.sweep.com', contact='touchone0001@gmail.com', authorizations=authorizations)
 
 CORS(api, resources={r"/api/*": {"origins": "*"}})
 

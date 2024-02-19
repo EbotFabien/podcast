@@ -6,7 +6,7 @@ from functools import wraps
 from flask import abort, request, session,Blueprint
 from datetime import datetime
 from flask import current_app as app
-#from sqlalchemy import or_, and_, distinct, func
+from sqlalchemy import or_, and_, distinct, func
 #from project import cache  #, logging
 import requests
 from app.models import Profile,Album,User,Episode,Episode_script
